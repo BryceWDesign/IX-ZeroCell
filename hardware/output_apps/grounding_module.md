@@ -1,67 +1,92 @@
-# IX-ZeroCell – Grounding Module
+# IX-ZeroCell – Grounding and RF Shielding Module
 
 **Author:** Bryce Wooster  
 **License:** Apache-2.0  
-**Purpose:** Define mandatory grounding and shielding protocols for IX-ZeroCell system deployment and testing.
+**Purpose:** Define full RF shielding, grounding, and EMI/RFI control layout for IX-ZeroCell system.
 
 ---
 
-## 💡 Why Proper Grounding?
+## ✅ Why This Matters
 
-- Protects human operators from electrical shock.  
-- Reduces EMI (Electromagnetic Interference) affecting nearby electronics.  
-- Stabilizes pulse discharge paths—improves consistency and performance.  
-
----
-
-## ✅ Grounding Types for IX-ZeroCell
-
-| Ground Type          | Description                                 | Connection Notes                       |
-|---------------------|---------------------------------------------|---------------------------------------|
-| Safety Earth Ground | Direct to facility ground or rod            | Green/yellow wire, meets IEC standards |
-| Chassis Ground      | All metal enclosures tied together          | Star-grounded back to Safety Earth    |
-| RF Shield Ground    | Shielding mesh tied to chassis              | Braided straps preferred              |
-| Capacitor Bank Ground | Low-impedance path for pulse return      | Heavy gauge cable, copper bus bars    |
+- IX-ZeroCell operates with high-current pulses at high frequency.  
+- EMI (Electromagnetic Interference) and RFI (Radio Frequency Interference) must be contained.  
+- Proper grounding protects both the system and nearby electronics/humans.
 
 ---
 
-## ⚙️ Best Practice Layout (Text Diagram)
+## ✅ Grounding System Overview
+
+| Element            | Specification                   |
+|-------------------|--------------------------------|
+| Chassis Ground    | Entire frame bonded to ground rod |
+| Ground Rod        | 8 ft copper-clad steel rod      |
+| Wire Gauge        | 4 AWG minimum copper wire       |
+| Connection Method | Mechanical clamp + soldered joint|
+| Bonding Points    | Pulse coil frame, control panel, capacitor bank case, all metal surfaces |
+
+---
+
+## ✅ RF Shielding System
+
+| Element            | Specification                            |
+|-------------------|-----------------------------------------|
+| Enclosure Type    | Steel mesh Faraday cage + solid panels  |
+| Mesh Size         | <5 mm hole diameter                     |
+| Panel Material    | Steel or copper                         |
+| Entry Points      | Cable entry ports with ferrite bead filtering|
+| Grounding Bond    | Shield enclosure bonded to main ground rod|
+
+---
+
+## ✅ Additional EMI/RFI Mitigation
+
+- Use **braided copper shielded cabling** wherever signal/control lines exist.  
+- Apply **ferrite chokes** on power leads (input and output).  
+- Maintain **minimum 2-inch separation** between high-power pulse lines and signal lines.  
+- Install **EMI-rated panel-mount filters** on any AC/DC power input lines.
+
+---
+
+## ✅ Example Layout Diagram (Text Format)
 
 ```
-[ Earth Ground Rod ]
-         |
-     [ Main Panel Ground Bus ]
-         |
-  -----------------------------
-  |            |              |
-[ Chassis ] [ Shield Mesh ] [ Capacitor Bank Return ]
+[ Main Enclosure ]
+====================
+| [Pulse Coils]     |
+| [Cap Banks]       |
+| [Control Panel]   |
+====================
+ |||||
+ || Ground Braid
+ |||||
+  ||
+ [Ground Rod] (8 ft copper clad steel)
 ```
 
-- **Important:** Keep power ground and signal ground isolated where applicable; use ground loops suppression techniques.
+---
+
+## ✅ Assembly Notes
+
+1. Ensure all metal enclosures have continuous electrical continuity.  
+2. Test resistance between any two chassis points: **Should not exceed 0.1 Ohm**.  
+3. Inspect all ground connections monthly if deployed long-term.  
+4. Install grounding strap between enclosure and ground rod—not just wire alone.  
 
 ---
 
-## ✅ Wire and Strap Specifications
+## ✅ Regulatory Considerations
 
-- **Chassis Ground:** Minimum 8 AWG copper cable or equivalent strap.  
-- **Capacitor Bank Return:** 2/0 AWG copper cable or 1" wide copper bar.  
-- **RF Mesh Ground:** 1" wide tinned copper braid or multi-layer copper mesh wrap.
-
----
-
-## ⚠️ Field Deployment Notes
-
-- Ground rod length: Minimum 8 feet (2.4 meters) driven fully into earth.  
-- Multiple rods spaced at least 6 feet (1.8 meters) apart for higher stability.  
-- Avoid sharp bends in ground cables; gentle sweeps maintain low impedance.
+- For deployment in populated areas:  
+  — System must pass **FCC Part 15 Class A** emission standards minimum.  
+  — Local jurisdiction grounding codes (NEC/NFPA) must be observed.  
 
 ---
 
 ## ✅ Summary
 
-- Grounding is not optional—every IX-ZeroCell unit must be properly bonded.  
-- Reduces fire, shock, and interference risks.  
-- Detailed checks should be part of any system build checklist before power-on.
+- The IX-ZeroCell is only as stable as its grounding and shielding setup.  
+- Properly applied Faraday cage and chassis bonding reduce risks dramatically.  
+- Real-world tested layout ensures reliable operation with minimal external impact.
 
 ---
 

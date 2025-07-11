@@ -1,114 +1,109 @@
-# IX-ZeroCell
+# IX-ZeroCell™
 
-**IX-ZeroCell** is an open-source, modular, multi-source energy harvesting platform that requires **no lithium batteries**. Designed for off-grid, low-power, and survival applications, it captures ambient and kinetic energy using stacked electromagnetic coils, RF harvesters, triboelectric film, thermoelectric converters, and piezoelectric elements. All energy is stored in **supercapacitors**, enabling a battery-free, indefinitely sustainable micro power supply.
+> **"Energy in motion, without batteries."**
 
----
-
-## ⚙️ Project Goals
-
-- ✅ Eliminate reliance on lithium batteries
-- ✅ Combine multiple ambient energy sources into one hybrid core
-- ✅ Ensure indefinite self-powered operation under real-world conditions
-- ✅ Be modular, field-deployable, and open-source
-- ✅ Enable charging and powering of USB-class electronics, sensors, microcontrollers, and comms gear
+**Author:** Bryce Wooster  
+**License:** Apache License 2.0  
+**Created:** July 2025  
+**Repository Purpose:** Ambient Energy Harvesting – Battery-Free Power Source Project  
 
 ---
 
-## 🔋 Harvesting Technologies Used
+## ✅ What Is This Project?
 
-- **Kinetic induction** (moving neodymium core through 99-stage copper coil array)
-- **RF ambient harvesting** (wideband rectennas)
-- **Thermoelectric generators** (TEGs for body heat or air differentials)
-- **Triboelectric nanogenerators** (PTFE/Kapton friction harvesting)
-- **Piezoelectric films** (vibration/motion)
-- **Passive solar support** (optional, for future modules)
+IX-ZeroCell™ is an open-source hardware and engineering project focused on real-world ambient energy harvesting using:
 
----
+- **Pulse Coil Acceleration Arrays**  
+- **RF/VLF Ambient Harvesting**
+- **Magnetic Induction Tube Systems (99 tubes standard)**
+- **Supercapacitor Storage**  
+- **Zero Batteries Required**
 
-## 💾 Storage
+Designed for:
 
-- Supercapacitor array (3× 2.7V 1000F)
-- MPPT-aware boost converters
-- Built-in protection, polarity correction, and output conditioning
-
----
-
-## 🛠️ Build Overview
-
-- Total coil stages: 99
-- Length: ~9.5 ft (modular segments)
-- Weight: ~12–15 lbs
-- Output: 3–5W sustained, 10W burst
-- Output ports: 5V USB-A, optional USB-C PD, raw DC terminal
-- All circuits run at sub-12V, <2A — **safe for human handling**
+- Emergency communications  
+- Sensor networks  
+- Low-wattage device power  
+- Off-grid educational demonstration units
 
 ---
 
-## 📦 Repository Structure
+## ✅ Why It Matters
 
-```plaintext
-├── LICENSE
-├── README.md
-├── hardware/
-│   ├── schematics/
-│   ├── BOM.csv
-│   └── ...
-├── firmware/
-│   ├── main.cpp
-│   ├── power_manager.cpp
-│   └── ...
-├── images/
-│   └── final_build.jpg
-├── docs/
-│   ├── theory_of_operation.md
-│   ├── assembly_guide.md
-│   └── ...
-├── tests/
-│   └── shake_test_log.md
-├── .github/
-│   ├── ISSUE_TEMPLATE.md
-│   └── PULL_REQUEST_TEMPLATE.md
+- Eliminates reliance on chemical batteries.
+- Fully modular and scalable design.
+- Based entirely on real, commercially available components.
+- Open-source with no proprietary restrictions.
+
+---
+
+## ✅ System Output (Real-World Estimations)
+
+- **Voltage:** 12–24V DC stabilized  
+- **Current:** 0.3–0.9 Amps peak (under optimal ambient conditions)  
+- **Total Wattage:** Approx. 7–20 Watts depending on configuration  
+
+> ⚠️ *Not designed for high-drain applications like motors or heavy industrial tools.*
+
+---
+
+## ✅ Project Directory Structure
+
+```
+/hardware/        → Schematics, BOM, build diagrams
+/firmware/        → Control scripts (if any)
+/docs/            → System overview, size estimates, usage guidelines
+/LICENSE          → Apache-2.0 License with Bryce Wooster attribution
+/README.md        → Project introduction and usage notes
 ```
 
 ---
 
-## 📄 Documentation
+## ✅ Build & Usage Notes
 
-> All documentation can be found in the [`/docs`](./docs/) folder and is structured for real-world reproducibility:
-- Full BOM with sources and specs
-- Winding diagrams and dimensions
-- Power tree and signal flow
-- Harvest tuning guidelines
-- Firmware structure and behavior
-- Deployment and use-case scenarios
+1. Review `/hardware/bom_master.md` for parts list and sourcing.
+2. Follow assembly instructions in `/hardware/assembly_instructions.md`.
+3. Test output using appropriate DC multimeters and oscilloscope (if available).
+4. Avoid standing directly over magnetic coil systems while active for extended periods.  
+   – Refer to `/docs/safety_protocols.md` for all safety notes.
 
 ---
 
-## 👤 Author
+## ✅ Author & Licensing
 
-Created by **Bryce Wooster**  
-© 2025 – Licensed under the [Apache License 2.0](./LICENSE)
+**Author:**  
+Bryce Wooster  
 
----
+**License:**  
+Apache License 2.0 – See `/LICENSE` for full terms.
 
-## 🙌 Contributing
+You are free to:
 
-Pull requests are welcome! Please see [`CONTRIBUTING.md`](./CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+- Use  
+- Modify  
+- Distribute  
+- Sell  
 
----
-
-## 📡 Status
-
-📍 Actively maintained  
-📐 Current version: `v1.0-alpha`  
-🧪 Next milestones:
-- Supercap tuning module
-- Field tests in temperature/altitude extremes
-- PCB harvest stack variant
+...as long as original credit to **Bryce Wooster** is maintained and licensing conditions are met.
 
 ---
 
-## 🧭 Slogan
+## ✅ Contributions & Community
 
-> **IX-ZeroCell** — _“Power without dependency.”_
+To contribute:
+
+- Fork the repository.
+- Submit pull requests with detailed descriptions.
+- Report issues via GitHub Issues tab.
+
+Respectful engineering discussions only—this project is grounded in real-world science.
+
+---
+
+## ✅ Final Remarks
+
+IX-ZeroCell™ is not theoretical. It is built from real physics, real parts, and tested design principles.  
+It exists to push forward battery-free power solutions using open-source methods.
+
+---
 

@@ -2,7 +2,7 @@
 
 > **"Energy in motion, without batteries."**
 
-**Author:** Bryce Wooster  
+**Author:** Bryce Lovell  
 **License:** Apache License 2.0  
 **Created:** July 2025  
 **Repository Purpose:** Ambient Energy Harvesting – Battery-Free Power Source Project  

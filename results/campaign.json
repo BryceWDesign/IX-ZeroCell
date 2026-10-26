@@ -1,0 +1,1012 @@
+{
+  "schema": "1",
+  "hardware_validated": false,
+  "authority": "fixed_parameter_sizing_model_not_hardware_or_weather_prediction",
+  "legacy_corrections": {
+    "three_1000F_series_equivalent_f": 333.3333333333333,
+    "three_cells_at_2_7V_full_energy_wh": 3.0375,
+    "three_cells_8_1_to_5_5V_ideal_usable_wh": 1.6370370370370368,
+    "99_times_0_288W_without_gain_w": 28.511999999999997,
+    "series_or_parallel_can_multiply_voltage_and_current_together": false
+  },
+  "physical_screens": {
+    "moving_0_1kg_at_2m_s_once_per_s_50pct_w": 0.1,
+    "RF_minus_20dBm_40pct_rectifier_w": 4.000000000000001e-06,
+    "10W_drive_80pct_recovery_net_w": -2.0,
+    "field_bank_10_to_4_5V_ideal_usable_wh": 8.307291666666666,
+    "field_bank_5W_ideal_runtime_h_at_88pct_no_parasitics": 1.4620833333333332,
+    "required_capacitance_f_for_1kW_1h_10_to_4_5V_88pct_no_parasitics": 102593.33143345681
+  },
+  "scenarios": [
+    {
+      "name": "20W_panel_daylight_1W_light",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 0,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": 3297.0,
+      "seconds_at_99_percent_load": 3903.0,
+      "output_wh": 1.0841666666666667,
+      "offered_input_wh": 25.600000000003384,
+      "requested_but_not_served_wh": 0.9158333333333334,
+      "end_bank_v": 10.0,
+      "max_step_residual_j": 3.6362024502523127e-12,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.002667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 1.598667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 3.194667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 4.790667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 6.271759,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 7.474239,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3298.0,
+          "bank_v": 8.002537,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 8.458711,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 9.295948,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        }
+      ]
+    },
+    {
+      "name": "20W_panel_priority_direct_path_1W_light",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 0,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": true,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": 5.0,
+      "seconds_at_99_percent_load": 7195.0,
+      "output_wh": 1.9986111111111111,
+      "offered_input_wh": 25.600000000003384,
+      "requested_but_not_served_wh": 0.001388888888888889,
+      "end_bank_v": 10.0,
+      "max_step_residual_j": 3.6273206660553114e-12,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.002667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6.0,
+          "bank_v": 0.015967,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 1.598667,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 3.194667,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 4.789035,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 6.150065,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 7.259742,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 8.220529,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 9.079848,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 9.864279,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 10.0,
+          "output_w": 1.0
+        }
+      ]
+    },
+    {
+      "name": "50W_panel_priority_direct_path_20W_DC",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 6
+      },
+      "initial_bank_v": 0,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": true,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 20,
+      "requested_load_w": 20,
+      "first_99_percent_load_s": 5.0,
+      "seconds_at_99_percent_load": 7195.0,
+      "output_wh": 39.97222222222222,
+      "offered_input_wh": 64.0,
+      "requested_but_not_served_wh": 0.027777777777777776,
+      "end_bank_v": 9.83331759872373,
+      "max_step_residual_j": 3.637978807091713e-12,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.002667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6.0,
+          "bank_v": 0.015967,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 1.598667,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 3.160045,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 4.32226,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 5.231771,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 6.004575,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 6.688275,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 7.307952,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 7.878751,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 8.410649,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 8.910627,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 9.383801,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 9.833318,
+          "output_w": 20.0
+        }
+      ]
+    },
+    {
+      "name": "20W_DC_solar_loss_after_one_hour",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 6
+      },
+      "initial_bank_v": 10,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": true,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 20,
+      "requested_load_w": 20,
+      "first_99_percent_load_s": 0.0,
+      "seconds_at_99_percent_load": 4912.0,
+      "output_wh": 27.291024515167127,
+      "offered_input_wh": 32.0,
+      "requested_but_not_served_wh": 12.708975484832873,
+      "end_bank_v": 4.4847533333332334,
+      "max_step_residual_j": 3.630873379734112e-12,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 10.0,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 9.99696,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 7.967122,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 5.197948,
+          "output_w": 20.0
+        },
+        {
+          "time_s": 4913.0,
+          "bank_v": 4.5,
+          "output_w": 7.688255
+        },
+        {
+          "time_s": 4914.0,
+          "bank_v": 4.499993,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 4.496747,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 4.492747,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 4.488747,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 4.484753,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "charged_field_bank_dark_5W_USB",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 10,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 5,
+      "first_99_percent_load_s": 0.0,
+      "seconds_at_99_percent_load": 5218.0,
+      "output_wh": 7.248211598640298,
+      "offered_input_wh": 0.0,
+      "requested_but_not_served_wh": 2.7517884013597027,
+      "end_bank_v": 4.486793333333247,
+      "max_step_residual_j": 3.631761558153812e-12,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 9.999234,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 9.528851,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 9.034218,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 8.51112,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 7.953958,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 7.355013,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 6.703116,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 5.981012,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 5.159355,
+          "output_w": 5.0
+        },
+        {
+          "time_s": 5219.0,
+          "bank_v": 4.5,
+          "output_w": 3.561755
+        },
+        {
+          "time_s": 5220.0,
+          "bank_v": 4.499993,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 4.498787,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 4.494787,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 4.490787,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 4.486793,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "large_bank_5W_generator_10min_cold_start_negative_control",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 0,
+      "duration_s": 10800,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": null,
+      "seconds_at_99_percent_load": 0.0,
+      "output_wh": 0.0,
+      "offered_input_wh": 0.8333333333333334,
+      "requested_but_not_served_wh": 3.0,
+      "end_bank_v": 1.5280066666662016,
+      "max_step_residual_j": 5.639932965095795e-14,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.002667,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 1.596,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 1.592,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 1.588,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 1.584,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 1.58,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 1.576,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 1.572,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 1.568,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 1.564,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 1.56,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 1.556,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 7201.0,
+          "bank_v": 1.552,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 7801.0,
+          "bank_v": 1.548,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 8401.0,
+          "bank_v": 1.544,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 9001.0,
+          "bank_v": 1.54,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 9601.0,
+          "bank_v": 1.536,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 10201.0,
+          "bank_v": 1.532,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 10800.0,
+          "bank_v": 1.528007,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "starter_bank_5W_generator_10min_then_1W_light",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 2,
+        "parallel": 1,
+        "cell_f": 100,
+        "cell_max_v": 2.5,
+        "cutoff_v": 2.2,
+        "cell_dc_resistance_ohm": 0.02,
+        "leakage_bank_a": 0.0001,
+        "max_charge_a": 1,
+        "max_discharge_a": 1
+      },
+      "initial_bank_v": 0,
+      "duration_s": 3600,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": 176.0,
+      "seconds_at_99_percent_load": 861.0,
+      "output_wh": 0.23940476831854082,
+      "offered_input_wh": 0.8333333333333334,
+      "requested_but_not_served_wh": 0.7605952316814591,
+      "end_bank_v": 2.1948760000004217,
+      "max_step_residual_j": 5.639932965095795e-14,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.02,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 177.0,
+          "bank_v": 3.535345,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 4.995402,
+          "output_w": 1.0
+        },
+        {
+          "time_s": 1038.0,
+          "bank_v": 2.2,
+          "output_w": 0.857166
+        },
+        {
+          "time_s": 1039.0,
+          "bank_v": 2.199998,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 2.199674,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 2.198474,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 2.197274,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 2.196074,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3600.0,
+          "bank_v": 2.194876,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "RF_only_large_bank_negative_control",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 0,
+      "duration_s": 3600,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": null,
+      "seconds_at_99_percent_load": 0.0,
+      "output_wh": 0.0,
+      "offered_input_wh": 4.00000000000017e-06,
+      "requested_but_not_served_wh": 1.0,
+      "end_bank_v": 0.0,
+      "max_step_residual_j": 0.0,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3600.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "no_input_empty_bank_negative_control",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 4,
+        "parallel": 1,
+        "cell_f": 3000,
+        "cell_max_v": 2.5,
+        "cutoff_v": 4.5,
+        "cell_dc_resistance_ohm": 0.0003,
+        "leakage_bank_a": 0.005,
+        "max_charge_a": 2,
+        "max_discharge_a": 3
+      },
+      "initial_bank_v": 0,
+      "duration_s": 3600,
+      "step_s": 1,
+      "controller_active_w": 0.01,
+      "controller_sleep_w": 1e-05,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 1,
+      "first_99_percent_load_s": null,
+      "seconds_at_99_percent_load": 0.0,
+      "output_wh": 0.0,
+      "offered_input_wh": 0.0,
+      "requested_but_not_served_wh": 1.0,
+      "end_bank_v": 0.0,
+      "max_step_residual_j": 0.0,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 3600.0,
+          "bank_v": 0.0,
+          "output_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "microharvester_small_bank_sensor",
+      "origin": "simulation_assumptions",
+      "battery_count": 0,
+      "bank": {
+        "series": 2,
+        "parallel": 1,
+        "cell_f": 1,
+        "cell_max_v": 2.5,
+        "cutoff_v": 2.2,
+        "cell_dc_resistance_ohm": 1,
+        "leakage_bank_a": 1e-06,
+        "max_charge_a": 0.02,
+        "max_discharge_a": 0.02
+      },
+      "initial_bank_v": 0,
+      "duration_s": 7200,
+      "step_s": 1,
+      "controller_active_w": 5e-06,
+      "controller_sleep_w": 1e-06,
+      "direct_source_allowed": false,
+      "direct_startup_s_assumption": 5,
+      "output_limit_w": 10,
+      "requested_load_w": 0.0001,
+      "first_99_percent_load_s": 1628.0,
+      "seconds_at_99_percent_load": 5572.0,
+      "output_wh": 0.00015477777777776527,
+      "offered_input_wh": 0.006000000000000196,
+      "requested_but_not_served_wh": 4.5222222222234756e-05,
+      "end_bank_v": 5.0,
+      "max_step_residual_j": 4.440892098500626e-16,
+      "hardware_validated": false,
+      "samples": [
+        {
+          "time_s": 1.0,
+          "bank_v": 0.04,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 601.0,
+          "bank_v": 2.122671,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1201.0,
+          "bank_v": 3.005117,
+          "output_w": 0.0
+        },
+        {
+          "time_s": 1801.0,
+          "bank_v": 3.671752,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 2401.0,
+          "bank_v": 4.213199,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 3001.0,
+          "bank_v": 4.692476,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 3601.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 4201.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 4801.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 5401.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 6001.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 6601.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        },
+        {
+          "time_s": 7200.0,
+          "bank_v": 5.0,
+          "output_w": 0.0001
+        }
+      ]
+    }
+  ]
+}

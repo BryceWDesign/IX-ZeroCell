@@ -1,0 +1,470 @@
+{
+  "version": "0.2.0",
+  "profile": "ZC-S1000-B",
+  "hardware_measured": false,
+  "procurement_released": false,
+  "scope": "Assembly-scope inventory, not a closed component-level BOM for unreleased control/protection assemblies",
+  "internal_board_parts": "A1-A4 purchased populated; vendor board BOM covers unchanged parts; rework is enumerated separately",
+  "parts": [
+    {
+      "ref": "PV1-PV3",
+      "quantity_per_scope": 3,
+      "scope": "channel",
+      "stack_quantity": 60,
+      "part_or_purchase_spec": "REC420AA PURE-R, 420 W",
+      "role": "Parallel solar source; no series connection",
+      "selection_status": "specified_component",
+      "source": "https://www.recgroup.com/sites/default/files/2025-01/Web_DS_REC_Alpha_Pure-R_EN.pdf"
+    },
+    {
+      "ref": "A1-A4",
+      "quantity_per_scope": 4,
+      "scope": "channel",
+      "stack_quantity": 80,
+      "part_or_purchase_spec": "ADI DC1924A populated board",
+      "role": "Direct, two charging, output converter; modifications required",
+      "selection_status": "specified_component",
+      "source": "https://www.analog.com/media/en/technical-documentation/user-guides/dc1924afa.pdf"
+    },
+    {
+      "ref": "C01-C60",
+      "quantity_per_scope": 60,
+      "scope": "channel",
+      "stack_quantity": 1200,
+      "part_or_purchase_spec": "Eaton XLR-48R6167-R, 166 F, 48.6 V",
+      "role": "Storage module; individually characterized",
+      "selection_status": "specified_component",
+      "source": "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-xlr-48-supercapacitor-module-data-sheet.pdf"
+    },
+    {
+      "ref": "RC01-RC60",
+      "quantity_per_scope": 60,
+      "scope": "channel",
+      "stack_quantity": 1200,
+      "part_or_purchase_spec": "TE HSC2002R2J, 2.2 ohm 200 W 5%",
+      "role": "Module fault-current limiting; pulse coordination outstanding",
+      "selection_status": "specified_component",
+      "source": "https://www.te.com/en/product-1-1630019-6.html"
+    },
+    {
+      "ref": "FC01-FC60",
+      "quantity_per_scope": 60,
+      "scope": "channel",
+      "stack_quantity": 1200,
+      "part_or_purchase_spec": "Littelfuse KLKD, 2 A DC fuse",
+      "role": "Module positive-terminal protection",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "HC01-HC60",
+      "quantity_per_scope": 60,
+      "scope": "channel",
+      "stack_quantity": 1200,
+      "part_or_purchase_spec": "Finger-safe fuse holder matched to KLKD 10x38 mm; >=100 VDC and bank fault duty",
+      "role": "Module fuse holders",
+      "selection_status": "installation_selection",
+      "source": ""
+    },
+    {
+      "ref": "D1-D5",
+      "quantity_per_scope": 5,
+      "scope": "channel",
+      "stack_quantity": 100,
+      "part_or_purchase_spec": "STPS10H100CFP; join both anodes; common cathode",
+      "role": "Direct, chargers, storage, and output reverse blocking",
+      "selection_status": "specified_component",
+      "source": "https://www.st.com/resource/en/datasheet/stps10h100c.pdf"
+    },
+    {
+      "ref": "HD1-HD5",
+      "quantity_per_scope": 5,
+      "scope": "channel",
+      "stack_quantity": 100,
+      "part_or_purchase_spec": "Insulated mounting/heat sink assembly for TO-220FP diode; validate junction temperature at measured loss",
+      "role": "Diode cooling",
+      "selection_status": "thermal_selection",
+      "source": ""
+    },
+    {
+      "ref": "RB",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "1.2 ohm, 1%, >=50 W aluminium-housed wirewound resistor; voltage and pulse rating coordinated with fuses",
+      "role": "Passive output sharing",
+      "selection_status": "purchase_specification",
+      "source": ""
+    },
+    {
+      "ref": "FPV1-FPV3",
+      "quantity_per_scope": 3,
+      "scope": "channel",
+      "stack_quantity": 60,
+      "part_or_purchase_spec": "Littelfuse KLKD, 15 A DC",
+      "role": "PV parallel-branch fuse",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FPVMAIN",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Littelfuse KLKD, 30 A DC",
+      "role": "PV combiner fuse",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FA1",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Littelfuse KLKD, 5 A DC",
+      "role": "Direct board input fuse",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FA2-FA3",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "Littelfuse KLKD, 10 A DC",
+      "role": "Charge board input fuses",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FBANK",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Littelfuse KLKD, 15 A DC",
+      "role": "Bank trunk fuse",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FGATE",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Littelfuse KLKD, 5 A DC",
+      "role": "Bank gate load branch",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FA4",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Littelfuse KLKD, 5 A DC",
+      "role": "Output converter input branch",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "FOUT_LOCAL-FOUT_BUS",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "Littelfuse KLKD, 2 A DC",
+      "role": "Feeder protection at source and combiner ends",
+      "selection_status": "coordination_pending",
+      "source": ""
+    },
+    {
+      "ref": "HF",
+      "quantity_per_scope": 12,
+      "scope": "channel",
+      "stack_quantity": 240,
+      "part_or_purchase_spec": "DC fuse holders matching non-module KLKD fuses above; verify interrupt duty",
+      "role": "Other specified channel fuse holders",
+      "selection_status": "installation_selection",
+      "source": ""
+    },
+    {
+      "ref": "K1",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "TE EV200AAANA, normally open; coil fed only from PV auxiliary",
+      "role": "Source disconnect",
+      "selection_status": "driver_coordination_pending",
+      "source": "https://www.te.com/en/product-1618002-7.html"
+    },
+    {
+      "ref": "AUX12",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Traco TEN 60-7212WIR, 36\u2013160 V input, 12 V output",
+      "role": "PV-only coil and auxiliary feed",
+      "selection_status": "specified_component",
+      "source": "https://www.tracopower.com/ten60wir-datasheet"
+    },
+    {
+      "ref": "AUX5P-AUX5B",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "RECOM R-78HB5.0-0.5, 9\u201372 V input, 5 V output",
+      "role": "PV-side and bank-side logic supply",
+      "selection_status": "specified_component",
+      "source": "https://recom-power.com/en/products/switching-regulators/switching-regulators-sip/rec-p-R-78HB5.0-0.5.html"
+    },
+    {
+      "ref": "AUXPROTECT",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Dedicated PV/bank auxiliary branch fuses, output OR diodes, decoupling and pickup-current allowance",
+      "role": "Auxiliary protection assembly",
+      "selection_status": "G01_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "A5",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "LM5069-1 based gate; CSD19536KTT candidate pass FET; independent UVLO/OVLO option",
+      "role": "Bank gate, SOA/inrush redesign for revised input load",
+      "selection_status": "G01_unreleased",
+      "source": "https://www.ti.com/lit/ds/symlink/lm5069.pdf"
+    },
+    {
+      "ref": "OVCTRL",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "TLV1702 + LM4040A25; nominal charge divider 178 kohm/10 kohm; latched independent cutoff",
+      "role": "OV comparator and fault-priority latch/driver assembly",
+      "selection_status": "G01_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "TS01-TS60",
+      "quantity_per_scope": 60,
+      "scope": "channel",
+      "stack_quantity": 1200,
+      "part_or_purchase_spec": "Normally closed, calibrated 45 C body-temperature switch with supervised open-circuit wiring",
+      "role": "Thermal fault sensing",
+      "selection_status": "G01_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "ALARM",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "60-module open-collector alarm and supervised continuity harness; <=5 mA sink per module",
+      "role": "Eaton alarm aggregation; not a direct MCU substitute",
+      "selection_status": "G01_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "R49_A1",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "86.6 kohm, 0.1%, 0603",
+      "role": "A1 output current resistor",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R49_A2_A3",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "34.8 kohm, 0.1%, 0603",
+      "role": "Charger output current resistors",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R49_A4",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "143 kohm, 0.1%, 0603 plus 10 kohm sealed multi-turn trim",
+      "role": "Calibrated A4 current; two physical parts",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R13_A1_A4",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "392 kohm, 0.1%, 0603 plus 20 kohm sealed multi-turn trim",
+      "role": "Output divider; each set has two physical parts",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R13_A2_A3",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "374 kohm, 0.1%, 0603 plus 5 kohm sealed multi-turn trim",
+      "role": "Charger divider; each set has two physical parts",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R16_A1_A4",
+      "quantity_per_scope": 4,
+      "scope": "channel",
+      "stack_quantity": 80,
+      "part_or_purchase_spec": "10.0 kohm, 0.1%, 0603",
+      "role": "Divider bottoms; existing board part may be retained after inspection",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R53_A1",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "590 kohm, 0.1%, 0603",
+      "role": "Direct source regulation",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R53_A2_A3",
+      "quantity_per_scope": 2,
+      "scope": "channel",
+      "stack_quantity": 40,
+      "part_or_purchase_spec": "649 kohm, 0.1%, 0603",
+      "role": "Charging source regulation",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R54_A1_A3",
+      "quantity_per_scope": 3,
+      "scope": "channel",
+      "stack_quantity": 60,
+      "part_or_purchase_spec": "20.0 kohm, 0.1%, 0603",
+      "role": "Source-regulation bottoms",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R11_A1_A3",
+      "quantity_per_scope": 3,
+      "scope": "channel",
+      "stack_quantity": 60,
+      "part_or_purchase_spec": "590 kohm, 0.1%, 0603",
+      "role": "PV input UVLO top",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R11_A4",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "294 kohm, 0.1%, 0603",
+      "role": "Output stage input UVLO top",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "R14_A1_A4",
+      "quantity_per_scope": 4,
+      "scope": "channel",
+      "stack_quantity": 80,
+      "part_or_purchase_spec": "20.0 kohm, 0.1%, 0603",
+      "role": "UVLO bottoms; existing board part must meet target tolerance",
+      "selection_status": "specified_component",
+      "source": ""
+    },
+    {
+      "ref": "ISOLATORS",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Lockable DC-rated PV/bank service isolation set; ratings derived from complete fault study",
+      "role": "Service isolation; opening is not discharge",
+      "selection_status": "G03_G06_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "RACK",
+      "quantity_per_scope": 4,
+      "scope": "channel",
+      "stack_quantity": 80,
+      "part_or_purchase_spec": "Anchored rack >=300 kg rated load, fifteen modules per rack, insulated covers and individual restraints",
+      "role": "Storage mechanics",
+      "selection_status": "G06_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "CHANNEL_HARNESS",
+      "quantity_per_scope": 1,
+      "scope": "channel",
+      "stack_quantity": 20,
+      "part_or_purchase_spec": "Equal-length module branches; 2.5 mm2 copper reference, trunk 6 mm2 reference, >=100 V insulation; final lengths/ampacity site-designed",
+      "role": "Lugs, strain relief, labels, wiring, busbar guards and supports",
+      "selection_status": "G06_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "SECTION",
+      "quantity_per_scope": 4,
+      "scope": "stack",
+      "stack_quantity": 4,
+      "part_or_purchase_spec": "Five-channel busbar/return with covered terminals, rated section disconnect/protection",
+      "role": "Section combining",
+      "selection_status": "G05_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "MAIN",
+      "quantity_per_scope": 1,
+      "scope": "stack",
+      "stack_quantity": 1,
+      "part_or_purchase_spec": "Main DC disconnect, load protection, independent output OV/UV shutdown and precharge",
+      "role": "Common output protection and startup",
+      "selection_status": "G05_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "CENTRAL",
+      "quantity_per_scope": 1,
+      "scope": "stack",
+      "stack_quantity": 1,
+      "part_or_purchase_spec": "Metering and optional supervisory logger within total 50 W common loss budget",
+      "role": "No final acquisition/actuation hardware selected",
+      "selection_status": "G05_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "SITE",
+      "quantity_per_scope": 1,
+      "scope": "stack",
+      "stack_quantity": 1,
+      "part_or_purchase_spec": "PV mounting, matched connectors, conductor routing, bonding, enclosures, cooling and structural plan",
+      "role": "Installation engineering inventory",
+      "selection_status": "G06_unreleased",
+      "source": ""
+    },
+    {
+      "ref": "TEST",
+      "quantity_per_scope": 1,
+      "scope": "stack",
+      "stack_quantity": 1,
+      "part_or_purchase_spec": "Calibrated 80 V current-limited supply; >=1.5 kW 60 V DC load; synchronized meters; differential probes; temperature logging; limited-energy fault fixture",
+      "role": "Test equipment, not installed operating source",
+      "selection_status": "equipment_specification",
+      "source": ""
+    }
+  ]
+}

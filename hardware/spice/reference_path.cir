@@ -1,0 +1,39 @@
+IX-ZeroCell ZC-D10 energy-conserving MODULE-LEVEL BEHAVIORAL proof of concept
+* Not manufacturer switch-mode macromodels; no hardware measurement implied.
+* RAW is the qualified 12 V source at U2 input, AFTER the solar buck/UVLO.
+* Four 10 F cells are represented by 2.5 F equivalent storage and 80 mOhm.
+.param RLOAD=2.5 CSTORE=2.5 ESR=0.08 INITIAL=10
+.param ETAPASS=0.98 ETACHARGE=0.90 ETABOOST=0.85 ETAPOST=0.90
+.param CURRENTIN=2 CURRENTCAP=9.67 QUIESCENT=0.05
+VRAW raw 0 PWL(0 12 29.999 12 30 0 39.999 0 40 12 60 12)
+* Power rail is fed from input, direct capacitor or backup boost, in that order.
+* Internal control abstraction; its consumption is covered by QUIESCENT.
+BLOGIC logic 0 V={v(raw)>10.8 || v(store)>3 ? 1 : 0}
+SENABLE logic enabled store 0 ENABLED
+RENABLE enabled 0 1k
+.model ENABLED SW(Ron=0.01 Roff=1e12 Vt=3.25 Vh=0.25)
+BPATH bus 0 V={v(raw)>10.8 ? v(raw) : (v(enabled)>0.5 ? max(v(cap),6.5) : 0)}
+BPOST out 0 V={v(bus)>6.0 ? min(5,sqrt(RLOAD*ETAPOST*max(0,(v(raw)>10.8 ? v(raw)*CURRENTIN*ETAPASS-QUIESCENT : min(25,v(cap)*CURRENTCAP*ETABOOST-QUIESCENT))))) : 0}
+RLOAD out 0 {RLOAD}
+* Account final-regulator power at its input instead of using a free VCVS.
+BPOSTDRAW bus 0 I={max(-i(BPOST)*v(out),0)/(max(v(bus),0.25)*ETAPOST)}
+* During source loss, every bus joule is withdrawn from the real capacitor.
+BCAPDRAW cap 0 I={v(raw)<=10.8 && v(enabled)>0.5 ? (max(-i(BPATH)*v(bus),0)+QUIESCENT)/(max(v(cap),0.25)*ETABOOST) : 0}
+* Charger pays for cap energy at the raw input and prioritizes the present load.
+* Smooth taper near 10 V prevents artificial on/off chatter in this screen.
+BCHARGE 0 cap I={v(raw)>10.8 ? max(0,min(5.33,min(20*(10-v(cap)),(v(raw)*CURRENTIN-max(-i(BPATH)*v(bus),0)/ETAPASS-QUIESCENT)*ETACHARGE/max(v(cap),0.25)))) : 0}
+BINPUT raw 0 I={v(raw)>10.8 ? ((max(-i(BPATH)*v(bus),0)/ETAPASS)+max(v(cap)*i(BCHARGE),0)/ETACHARGE+QUIESCENT)/max(v(raw),0.25) : 0}
+RSTORE cap store {ESR}
+CSTORE store 0 {CSTORE} IC={INITIAL}
+RLEAK store 0 100k
+* Screen refuses unsupported constant-power draw below backup energy floor.
+* These controls are idealized abstractions, not measured vendor protection timing.
+.options reltol=0.0001 abstol=1e-9 method=gear
+.control
+set wr_singlescale
+set wr_vecnames
+tran 0.002 60 uic
+wrdata trace.dat v(raw) v(bus) v(cap) v(store) v(out) i(VRAW)
+quit
+.endc
+.end

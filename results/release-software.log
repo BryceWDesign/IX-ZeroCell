@@ -1,0 +1,243 @@
+test_constant_power_trapezoidal_integral (test_evidence.EvidenceReview.test_constant_power_trapezoidal_integral) ... ok
+test_duplicate_json_keys_rejected (test_evidence.EvidenceReview.test_duplicate_json_keys_rejected) ... ok
+test_gap_rejected (test_evidence.EvidenceReview.test_gap_rejected) ... ok
+test_measured_label_requires_review_and_never_proves_hardware (test_evidence.EvidenceReview.test_measured_label_requires_review_and_never_proves_hardware) ... ok
+test_nan_json_rejected (test_evidence.EvidenceReview.test_nan_json_rejected) ... ok
+test_output_energy_without_input_or_storage_fails (test_evidence.EvidenceReview.test_output_energy_without_input_or_storage_fails) ... ok
+test_path_escape_rejected (test_evidence.EvidenceReview.test_path_escape_rejected) ... ok
+test_power_floor_includes_instrument_uncertainty (test_evidence.EvidenceReview.test_power_floor_includes_instrument_uncertainty) ... ok
+test_ragged_csv_rejected (test_evidence.EvidenceReview.test_ragged_csv_rejected) ... ok
+test_short_test_not_sustained_power_proof (test_evidence.EvidenceReview.test_short_test_not_sustained_power_proof) ... ok
+test_synthetic_never_qualifies_as_measurement_candidate (test_evidence.EvidenceReview.test_synthetic_never_qualifies_as_measurement_candidate) ... ok
+test_tampered_bytes_rejected (test_evidence.EvidenceReview.test_tampered_bytes_rejected) ... ok
+test_time_reversal_rejected (test_evidence.EvidenceReview.test_time_reversal_rejected) ... ok
+test_analytical_no_loss_runtime (test_power.BankPhysics.test_analytical_no_loss_runtime) ... ok
+test_charge_full_bank_spills_surplus (test_power.BankPhysics.test_charge_full_bank_spills_surplus) ... ok
+test_direct_source_avoids_charge_discharge_penalty (test_power.BankPhysics.test_direct_source_avoids_charge_discharge_penalty) ... ok
+test_exact_constant_current_charge (test_power.BankPhysics.test_exact_constant_current_charge) ... ok
+test_exact_discharge_and_resistive_heat (test_power.BankPhysics.test_exact_discharge_and_resistive_heat) ... ok
+test_invalid_bank_inputs (test_power.BankPhysics.test_invalid_bank_inputs) ... ok
+test_kinetic_budget_cannot_be_multiplied_by_coil_count (test_power.BankPhysics.test_kinetic_budget_cannot_be_multiplied_by_coil_count) ... ok
+test_no_duplicate_metered_source (test_power.BankPhysics.test_no_duplicate_metered_source) ... ok
+test_no_free_energy_through_closed_feedback_loop (test_power.BankPhysics.test_no_free_energy_through_closed_feedback_loop) ... ok
+test_output_ceiling_and_unmet_load (test_power.BankPhysics.test_output_ceiling_and_unmet_load) ... ok
+test_parallel_cells_preserve_energy (test_power.BankPhysics.test_parallel_cells_preserve_energy) ... ok
+test_randomized_energy_closure_and_limits (test_power.BankPhysics.test_randomized_energy_closure_and_limits) ... ok
+test_reject_nan_infinity_boolean_negative_and_zero_dt (test_power.BankPhysics.test_reject_nan_infinity_boolean_negative_and_zero_dt) ... ok
+test_rf_minus20dbm_is_ten_microwatts_before_rectification (test_power.BankPhysics.test_rf_minus20dbm_is_ten_microwatts_before_rectification) ... ok
+test_source_physical_ranges (test_power.BankPhysics.test_source_physical_ranges) ... ok
+test_temperature_difference_needs_real_heat_flow (test_power.BankPhysics.test_temperature_difference_needs_real_heat_flow) ... ok
+test_thermal_model_matches_time_constant (test_power.BankPhysics.test_thermal_model_matches_time_constant) ... ok
+test_three_series_cells_capacitance_and_energy (test_power.BankPhysics.test_three_series_cells_capacitance_and_energy) ... ok
+test_zero_input_empty_bank_delivers_nothing (test_power.BankPhysics.test_zero_input_empty_bank_delivers_nothing) ... ok
+test_20W_extension_requires_input_and_stops_when_storage_runs_out (test_power.Scenarios.test_20W_extension_requires_input_and_stops_when_storage_runs_out) ... ok
+test_dark_output_cannot_exceed_initial_usable_energy (test_power.Scenarios.test_dark_output_cannot_exceed_initial_usable_energy) ... ok
+test_direct_path_avoids_waiting_for_large_storage (test_power.Scenarios.test_direct_path_avoids_waiting_for_large_storage) ... ok
+test_hardware_claim_never_derived_from_simulation (test_power.Scenarios.test_hardware_claim_never_derived_from_simulation) ... ok
+test_invalid_scenario_timing (test_power.Scenarios.test_invalid_scenario_timing) ... ok
+test_negative_controls_fail_and_real_inputs_deliver_in_model (test_power.Scenarios.test_negative_controls_fail_and_real_inputs_deliver_in_model) ... ok
+test_step_halving_agrees_on_energy (test_power.Scenarios.test_step_halving_agrees_on_energy) ... ok
+test_72_hours_without_input_is_not_a_claim_of_stock_build (test_reference_build.ConcreteBuild.test_72_hours_without_input_is_not_a_claim_of_stock_build) ... ok
+test_backup_change_resolves_nominal_six_volt_headroom (test_reference_build.ConcreteBuild.test_backup_change_resolves_nominal_six_volt_headroom) ... ok
+test_every_required_module_and_modification_is_in_BOM (test_reference_build.ConcreteBuild.test_every_required_module_and_modification_is_in_BOM) ... ok
+test_every_route_terminates_on_a_real_declared_terminal (test_reference_build.ConcreteBuild.test_every_route_terminates_on_a_real_declared_terminal) ... ok
+test_invalid_sizing_data_rejected (test_reference_build.ConcreteBuild.test_invalid_sizing_data_rejected) ... ok
+test_no_added_storage_requires_unreleased_large_bank_changes (test_reference_build.ConcreteBuild.test_no_added_storage_requires_unreleased_large_bank_changes) ... ok
+test_overnight_is_a_real_storage_requirement (test_reference_build.ConcreteBuild.test_overnight_is_a_real_storage_requirement) ... ok
+test_parasitics_are_counted_even_when_useful_load_is_zero (test_reference_build.ConcreteBuild.test_parasitics_are_counted_even_when_useful_load_is_zero) ... ok
+test_stock_bank_not_confused_with_thousands_of_farads (test_reference_build.ConcreteBuild.test_stock_bank_not_confused_with_thousands_of_farads) ... ok
+test_uvlo_order_is_above_buck_dropout_and_below_panel_voc (test_reference_build.ConcreteBuild.test_uvlo_order_is_above_buck_dropout_and_below_panel_voc) ... ok
+test_combiner_power_and_channel_limit (test_stack.StackCases.test_combiner_power_and_channel_limit) ... ok
+test_conservation_under_source_loss (test_stack.StackCases.test_conservation_under_source_loss) ... ok
+test_energy_is_sum_of_banks_not_square_of_count (test_stack.StackCases.test_energy_is_sum_of_banks_not_square_of_count) ... ok
+test_invalid_vectors (test_stack.StackCases.test_invalid_vectors) ... ok
+test_nineteen_low_limit_channels_do_not_guarantee_full_power (test_stack.StackCases.test_nineteen_low_limit_channels_do_not_guarantee_full_power) ... ok
+test_no_input_empty_store_produces_no_output (test_stack.StackCases.test_no_input_empty_store_produces_no_output) ... ok
+test_nonfinite_and_efficiency_errors (test_stack.StackCases.test_nonfinite_and_efficiency_errors) ... ok
+test_previous_56_module_bank_not_silently_reused_for_higher_budget (test_stack.StackCases.test_previous_56_module_bank_not_silently_reused_for_higher_budget) ... ok
+test_rf_units_and_auxiliaries (test_stack.StackCases.test_rf_units_and_auxiliaries) ... ok
+test_simulation_never_sets_hardware_flag (test_stack.StackCases.test_simulation_never_sets_hardware_flag) ... ok
+test_static_needs_recharge (test_stack.StackCases.test_static_needs_recharge) ... ok
+test_unpowered_channel_cannot_sink_current (test_stack.StackCases.test_unpowered_channel_cannot_sink_current) ... ok
+test_unsupported_source_power_is_rejected (test_stack.StackCases.test_unsupported_source_power_is_rejected) ... ok
+test_zero_collecting_area_does_not_make_rf_power (test_stack.StackCases.test_zero_collecting_area_does_not_make_rf_power) ... ok
+test_configuration_document_matches_executable_parameters (test_stack_assets.StackAssets.test_configuration_document_matches_executable_parameters) ... ok
+test_inventory_matches_energy_storage_and_converters (test_stack_assets.StackAssets.test_inventory_matches_energy_storage_and_converters) ... ok
+test_no_fabricated_measurement_rows (test_stack_assets.StackAssets.test_no_fabricated_measurement_rows) ... ok
+test_unfinished_protection_is_not_hidden (test_stack_assets.StackAssets.test_unfinished_protection_is_not_hidden) ... ok
+test_wire_schedule_has_no_bypassed_module_resistor (test_stack_assets.StackAssets.test_wire_schedule_has_no_bypassed_module_resistor) ... ok
+test_duplicate_channel_id_rejected (test_stack_evidence.StackEvidence.test_duplicate_channel_id_rejected) ... ok
+test_external_artifact_path_rejected (test_stack_evidence.StackEvidence.test_external_artifact_path_rejected) ... ok
+test_hash_tampering_rejected (test_stack_evidence.StackEvidence.test_hash_tampering_rejected) ... ok
+test_long_sample_gap_cannot_be_used_to_certify_transients (test_stack_evidence.StackEvidence.test_long_sample_gap_cannot_be_used_to_certify_transients) ... ok
+test_nan_uncertainty_rejected (test_stack_evidence.StackEvidence.test_nan_uncertainty_rejected) ... ok
+test_origin_label_alone_does_not_create_a_16_hour_run (test_stack_evidence.StackEvidence.test_origin_label_alone_does_not_create_a_16_hour_run) ... ok
+test_synthetic_never_hardware_pass (test_stack_evidence.StackEvidence.test_synthetic_never_hardware_pass) ... ok
+test_twenty_banks_must_not_be_replaced_by_one_average (test_stack_evidence.StackEvidence.test_twenty_banks_must_not_be_replaced_by_one_average) ... ok
+
+----------------------------------------------------------------------
+Ran 76 tests in 0.840s
+
+OK
+23 firmware fault/energy cases passed
+15 stack advisory cases passed; no actuation or hardware validation
+{
+  "bounds": {
+    "origin": "calculation",
+    "configuration": {
+      "channels": 20,
+      "modules_per_channel": 60,
+      "module_f": 166.0,
+      "capacity_fraction": 0.8,
+      "high_v": 45.5,
+      "low_v": 22.0,
+      "channel_budget_w": 60.0,
+      "output_efficiency": 0.85,
+      "local_aux_w": 4.0,
+      "module_leakage_a": 0.01,
+      "leakage_bound_v": 47.5,
+      "branch_loss_w": 0.8,
+      "branch_r_ohm": 2.32,
+      "charge_efficiency": 0.95,
+      "conditioned_source_w": 340.0,
+      "pv_w": 400.0,
+      "source_efficiency": 0.9,
+      "day_aux_w": 10.0,
+      "dark_hours": 16.0,
+      "light_hours": 8.0,
+      "net_output_w": 1000.0,
+      "shared_allowance_w": 50.0
+    },
+    "effective_channel_f": 7968.0,
+    "usable_channel_wh": 1755.45,
+    "channel_draw_bound_w": 103.88823529411765,
+    "night_channel_wh": 1662.2117647058824,
+    "night_margin_wh": 93.23823529411766,
+    "usable_stack_kwh": 35.109,
+    "night_stack_kwh": 33.24423529411765,
+    "daily_stack_kwh": 49.86635294117647,
+    "replenishment_lower_kwh": 51.68,
+    "capacity_check": true,
+    "daily_energy_check": true,
+    "storage_stress_budget_headroom_w": 150.0,
+    "hardware_validated": false
+  },
+  "combiner_cases": {
+    "nominal": {
+      "supplied": true,
+      "bus_v": 48.136694935368695,
+      "channel_a": [
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442,
+        1.0906440517050442
+      ],
+      "output_w": 1050.0000000000039,
+      "max_channel_w": 52.50000000000019,
+      "min_channel_w": 52.50000000000019
+    },
+    "qualified_extremes": {
+      "supplied": true,
+      "bus_v": 48.138700731788646,
+      "channel_a": [
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        0.9931490300876794,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877,
+        1.1880481855376877
+      ],
+      "output_w": 1050.000000000002,
+      "max_channel_w": 57.19109605854326,
+      "min_channel_w": 47.808903941456954
+    },
+    "19_low_current_units_full_load": {
+      "supplied": false,
+      "bus_v": null,
+      "channel_a": [],
+      "output_w": 0.0,
+      "max_available_in_window_w": 1038.6403199999997
+    },
+    "19_units_derated": {
+      "supplied": true,
+      "bus_v": 48.00767887922008,
+      "channel_a": [
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794,
+        1.096315843133794
+      ],
+      "output_w": 1000.0000000000034,
+      "max_channel_w": 52.631578947368595,
+      "min_channel_w": 52.631578947368595
+    },
+    "zero_sources": {
+      "supplied": false,
+      "bus_v": null,
+      "channel_a": [],
+      "output_w": 0.0,
+      "max_available_in_window_w": 0.0
+    }
+  },
+  "cases": {
+    "qualified_envelope": 1.0913936421275139e-11,
+    "four_shaded_channels": 8375.50000000001,
+    "48h_darkness": 35589.7819490358,
+    "empty_no_source": 28800.0,
+    "weak_capacitance": 299.8196689679064
+  }
+}
+Saved 10 simulated scenarios to results/campaign.json
+{
+  "software_checks_passed": true,
+  "hardware_validated": false,
+  "hosted_ci_status": "query_GitHub_Actions_for_current_commit",
+  "python_tests_passed": 76,
+  "firmware_cases_passed": 23,
+  "stack_advisory_cases_passed": 15
+}

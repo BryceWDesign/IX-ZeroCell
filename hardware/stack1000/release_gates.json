@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "construction_released": false,
+  "hardware_validated": false,
+  "gates": [
+    {
+      "id": "G01",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G02",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G03",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G04",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G05",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G06",
+      "status": "open",
+      "hardware_release_blocker": true
+    },
+    {
+      "id": "G07",
+      "status": "open",
+      "hardware_release_blocker": true
+    }
+  ]
+}

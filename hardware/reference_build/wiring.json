@@ -1,0 +1,261 @@
+{
+  "schema": "1",
+  "build_id": "ZC-D10",
+  "terminals": {
+    "PV1": [
+      "PLUS",
+      "MINUS"
+    ],
+    "F1": [
+      "IN",
+      "OUT"
+    ],
+    "S1": [
+      "A_IN",
+      "A_OUT",
+      "B_IN",
+      "B_OUT"
+    ],
+    "U1": [
+      "VIN",
+      "VOUT",
+      "GND",
+      "EN",
+      "VRP",
+      "PG"
+    ],
+    "RUV1": [
+      "A",
+      "B"
+    ],
+    "RUV2": [
+      "A",
+      "B"
+    ],
+    "F2": [
+      "IN",
+      "OUT"
+    ],
+    "U2": [
+      "E1_VIN",
+      "E2_GND",
+      "E3_VOUT",
+      "E4_GND",
+      "E9_VCAP",
+      "E10_GND",
+      "JP1_INTVCC"
+    ],
+    "U3": [
+      "VIN",
+      "VOUT",
+      "GND",
+      "EN",
+      "VRP",
+      "PG"
+    ],
+    "F3": [
+      "IN",
+      "OUT"
+    ],
+    "S2": [
+      "IN",
+      "OUT"
+    ],
+    "JOUTP": [
+      "CORE",
+      "LOAD"
+    ],
+    "JOUTN": [
+      "CORE",
+      "LOAD"
+    ],
+    "F4": [
+      "IN",
+      "OUT"
+    ],
+    "S3": [
+      "IN",
+      "OUT"
+    ],
+    "RDIS": [
+      "A",
+      "B"
+    ]
+  },
+  "connections": [
+    {
+      "wire": "W01",
+      "from": "PV1.PLUS",
+      "to": "F1.IN",
+      "awg": 16,
+      "maximum_route_mm": 200
+    },
+    {
+      "wire": "W02",
+      "from": "F1.OUT",
+      "to": "S1.A_IN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W03",
+      "from": "S1.A_OUT",
+      "to": "U1.VIN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W04",
+      "from": "PV1.MINUS",
+      "to": "S1.B_IN",
+      "awg": 16,
+      "maximum_route_mm": 200
+    },
+    {
+      "wire": "W05",
+      "from": "S1.B_OUT",
+      "to": "U1.GND",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W06",
+      "from": "U1.VOUT",
+      "to": "F2.IN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W07",
+      "from": "F2.OUT",
+      "to": "U2.E1_VIN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W08",
+      "from": "U1.GND",
+      "to": "U2.E2_GND",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W09",
+      "from": "U2.E3_VOUT",
+      "to": "U3.VIN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W10",
+      "from": "U2.E4_GND",
+      "to": "U3.GND",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W11",
+      "from": "U3.VOUT",
+      "to": "F3.IN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W12",
+      "from": "F3.OUT",
+      "to": "S2.IN",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W13",
+      "from": "S2.OUT",
+      "to": "JOUTP.CORE",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W14",
+      "from": "U3.GND",
+      "to": "JOUTN.CORE",
+      "awg": 16,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W15",
+      "from": "U1.VIN",
+      "to": "RUV1.A",
+      "awg": 24,
+      "maximum_route_mm": 75
+    },
+    {
+      "wire": "W16",
+      "from": "RUV1.B",
+      "to": "U1.EN",
+      "awg": 24,
+      "maximum_route_mm": 75
+    },
+    {
+      "wire": "W17",
+      "from": "U1.EN",
+      "to": "RUV2.A",
+      "awg": 24,
+      "maximum_route_mm": 75
+    },
+    {
+      "wire": "W18",
+      "from": "RUV2.B",
+      "to": "U1.GND",
+      "awg": 24,
+      "maximum_route_mm": 75
+    },
+    {
+      "wire": "W19",
+      "from": "U2.E9_VCAP",
+      "to": "F4.IN",
+      "awg": 20,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W20",
+      "from": "F4.OUT",
+      "to": "S3.IN",
+      "awg": 20,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W21",
+      "from": "S3.OUT",
+      "to": "RDIS.A",
+      "awg": 20,
+      "maximum_route_mm": 150
+    },
+    {
+      "wire": "W22",
+      "from": "RDIS.B",
+      "to": "U2.E10_GND",
+      "awg": 20,
+      "maximum_route_mm": 150
+    }
+  ],
+  "external_load_terminals": [
+    "JOUTP.LOAD",
+    "JOUTN.LOAD"
+  ],
+  "intentional_unconnected": [
+    "U1.VRP",
+    "U1.PG",
+    "U3.VRP",
+    "U3.PG",
+    "U3.EN"
+  ],
+  "module_power_termination": "Use TWO 20 AWG 50 mm pigtails at each module power node. U1 VOUT, U3 VIN and U3 VOUT use one WAGO 221-413 each. U1 VIN, U1 GND and U3 GND use one WAGO 221-415 each to include the divider and return branches. Leave unused lever positions closed and empty.",
+  "stock_jumpers": {
+    "U2.JP1": "INTVCC, I2C disconnected; do not attach a second I2C power source"
+  },
+  "switch_states_normal": {
+    "S1": "ON",
+    "S2": "ON",
+    "S3": "OFF"
+  }
+}

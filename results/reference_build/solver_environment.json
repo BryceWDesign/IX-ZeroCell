@@ -1,0 +1,9 @@
+{
+  "solver": "ngspice",
+  "version": "42",
+  "distribution_package": "Ubuntu noble ngspice 42+ds-3build1 amd64",
+  "package_sha256": "466c4c06418107ceaa9c9457065b3bb71a9d9dc5ec6fef186d7de9d5208ce8db",
+  "package_source": "https://archive.ubuntu.com/ubuntu/dists/noble/universe/binary-amd64/Packages.xz",
+  "installation": "Portable local extraction with libXft/libXrender dependencies; no binaries redistributed in this repository",
+  "hardware_measurements_performed": false
+}

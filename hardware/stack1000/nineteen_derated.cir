@@ -1,0 +1,115 @@
+* Twenty-channel output combiner, behavioral populated converter output ports
+* Every source is explicit test-fixture power. No ambient power inference.
+.options reltol=0.0001 abstol=1n
+.model DBLOCK D(Is=1u N=1.2 Rs=0.02 BV=100 Ibv=1u)
+Cbus bus 0 470u
+Rbleed bus 0 100k
+VSLOAD bus load 0
+BREG0 n0 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS0)-1.14))
+VS0 n0 a0 0
+RSHARE0 a0 b0 1.2
+D0 b0 c0 DBLOCK
+RWIRE0 c0 bus 0.05
+BREG1 n1 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS1)-1.14))
+VS1 n1 a1 0
+RSHARE1 a1 b1 1.2
+D1 b1 c1 DBLOCK
+RWIRE1 c1 bus 0.05
+BREG2 n2 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS2)-1.14))
+VS2 n2 a2 0
+RSHARE2 a2 b2 1.2
+D2 b2 c2 DBLOCK
+RWIRE2 c2 bus 0.05
+BREG3 n3 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS3)-1.14))
+VS3 n3 a3 0
+RSHARE3 a3 b3 1.2
+D3 b3 c3 DBLOCK
+RWIRE3 c3 bus 0.05
+BREG4 n4 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS4)-1.14))
+VS4 n4 a4 0
+RSHARE4 a4 b4 1.2
+D4 b4 c4 DBLOCK
+RWIRE4 c4 bus 0.05
+BREG5 n5 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS5)-1.14))
+VS5 n5 a5 0
+RSHARE5 a5 b5 1.2
+D5 b5 c5 DBLOCK
+RWIRE5 c5 bus 0.05
+BREG6 n6 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS6)-1.14))
+VS6 n6 a6 0
+RSHARE6 a6 b6 1.2
+D6 b6 c6 DBLOCK
+RWIRE6 c6 bus 0.05
+BREG7 n7 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS7)-1.14))
+VS7 n7 a7 0
+RSHARE7 a7 b7 1.2
+D7 b7 c7 DBLOCK
+RWIRE7 c7 bus 0.05
+BREG8 n8 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS8)-1.14))
+VS8 n8 a8 0
+RSHARE8 a8 b8 1.2
+D8 b8 c8 DBLOCK
+RWIRE8 c8 bus 0.05
+BREG9 n9 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS9)-1.14))
+VS9 n9 a9 0
+RSHARE9 a9 b9 1.2
+D9 b9 c9 DBLOCK
+RWIRE9 c9 bus 0.05
+BREG10 n10 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS10)-1.14))
+VS10 n10 a10 0
+RSHARE10 a10 b10 1.2
+D10 b10 c10 DBLOCK
+RWIRE10 c10 bus 0.05
+BREG11 n11 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS11)-1.14))
+VS11 n11 a11 0
+RSHARE11 a11 b11 1.2
+D11 b11 c11 DBLOCK
+RWIRE11 c11 bus 0.05
+BREG12 n12 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS12)-1.14))
+VS12 n12 a12 0
+RSHARE12 a12 b12 1.2
+D12 b12 c12 DBLOCK
+RWIRE12 c12 bus 0.05
+BREG13 n13 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS13)-1.14))
+VS13 n13 a13 0
+RSHARE13 a13 b13 1.2
+D13 b13 c13 DBLOCK
+RWIRE13 c13 bus 0.05
+BREG14 n14 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS14)-1.14))
+VS14 n14 a14 0
+RSHARE14 a14 b14 1.2
+D14 b14 c14 DBLOCK
+RWIRE14 c14 bus 0.05
+BREG15 n15 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS15)-1.14))
+VS15 n15 a15 0
+RSHARE15 a15 b15 1.2
+D15 b15 c15 DBLOCK
+RWIRE15 c15 bus 0.05
+BREG16 n16 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS16)-1.14))
+VS16 n16 a16 0
+RSHARE16 a16 b16 1.2
+D16 b16 c16 DBLOCK
+RWIRE16 c16 bus 0.05
+BREG17 n17 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS17)-1.14))
+VS17 n17 a17 0
+RSHARE17 a17 b17 1.2
+D17 b17 c17 DBLOCK
+RWIRE17 c17 bus 0.05
+BREG18 n18 0 V=max(0,49.9*min(time/0.02,1)-200*max(0,i(VS18)-1.14))
+VS18 n18 a18 0
+RSHARE18 a18 b18 1.2
+D18 b18 c18 DBLOCK
+RWIRE18 c18 bus 0.05
+BREG19 n19 0 V=max(0,0*min(time/0.02,1)-200*max(0,i(VS19)-1.14))
+VS19 n19 a19 0
+RSHARE19 a19 b19 1.2
+D19 b19 c19 DBLOCK
+RWIRE19 c19 bus 0.05
+BLOAD load 0 I=(time>0.1)*1000*v(bus)/max(v(bus)*v(bus),1600)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 0.0002 0.5 0 0.0002
+wrdata trace.dat v(bus) i(VS0) i(VS19) i(VSLOAD)
+.endc
+.end

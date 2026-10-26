@@ -1,0 +1,18 @@
+ZC-D10 source voltage divider and idealized enable hysteresis
+* This validates the selected resistor calculation, not real IC tolerances.
+VPV pv 0 PWL(0 10 10 25 20 10)
+RTOP pv en 2200
+RINTERNAL pv en 100000
+RBOTTOM en 0 191
+VLOGIC logic 0 1
+SENABLE logic enabled en 0 ENABLE
+RPULL enabled 0 1k
+.model ENABLE SW(Ron=0.01 Roff=1e12 Vt=1.275 Vh=0.075)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 0.001 20
+wrdata uvlo.dat v(pv) v(en) v(enabled)
+quit
+.endc
+.end

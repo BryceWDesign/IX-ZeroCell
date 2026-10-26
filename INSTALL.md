@@ -1,116 +1,31 @@
-# Installation and Assembly Guide for IX-ZeroCell
+# Install and reproduce v0.2.0
 
-This document provides step-by-step instructions to assemble the hardware components and install the firmware for the IX-ZeroCell energy harvesting system.
+Extract the ZIP and work inside `IX-ZeroCell`. Python 3.11+ is required. Core tools have no third-party Python runtime dependencies. Native C++ checks need g++ or clang++. Circuit checks need ngspice.
 
----
+```powershell
+python --version
+python scripts/check_manifest.py
+python -m unittest discover -s tests -v
+python scripts/verify.py
+python -m ix_zerocell reference
+python -m ix_zerocell stack
+python scripts/run_reference_poc.py
+python scripts/run_stack_spice.py
+```
 
-## Hardware Assembly
+`verify.ps1` wraps the core verification command and propagates failure. On Windows, install a compatible native compiler and make it available on PATH, or run the full native/circuit suite in the included Ubuntu CI jobs. This delivery did not execute Windows or PowerShell; Linux checks are recorded.
 
-### Tools Needed
+On supported Linux x86_64, the retained AVR monitor build fetches checksum-pinned official compiler/core archives:
 
-- Soldering iron (fine tip recommended)
-- Wire cutters and strippers
-- Precision screwdriver set
-- Multimeter
-- Coil winding jig (optional but recommended)
-- Heat shrink tubing and electrical tape
-- Safety gloves and eye protection
+```sh
+python scripts/build_avr.py --fetch
+python scripts/verify_release.py --avr-fetch
+```
 
----
+The latter command runs all local software/circuit/build stages. It requires ngspice on PATH; `--ngspice /actual/path` and `--library-path /actual/lib/path` support a local extracted installation. If AVR is omitted, the report explicitly remains an incomplete full release check. No command flashes hardware or controls a power circuit.
 
-### Step 1: Coil Assembly
+`python scripts/run_stack_campaign.py` reproduces the storage/combiner calculations. `python scripts/review_stack_measurements.py path/to/bundle.json` reviews actual supplied measurement data under the documented schema; no sample measured dataset is fabricated.
 
-- Prepare 99 coil stages as per the specifications in `hardware/coil_winding.md`.
-- Each coil should use 30 AWG enameled copper wire, 200 turns, wound tightly around a 12mm diameter form.
-- Connect coils in series, ensuring proper polarity (marked in schematics).
-- Verify resistance and continuity with a multimeter.
+Optional plot regeneration: install matplotlib in your chosen environment, then run `python scripts/plot_stack.py`. Plots are not required for core verification. See the two separate assembly guides before working on hardware; software installation is not construction release.
 
----
-
-### Step 2: Magnetic Core Installation
-
-- Insert the neodymium magnetic core into the coil array with the proper orientation to maximize induction.
-- Secure the core mechanically using brackets from the `hardware/3d_cad/` files.
-
----
-
-### Step 3: Power Electronics Integration
-
-- Connect coils’ output to the power management circuit (refer to `hardware/schematics/power_tree.md`).
-- Install supercapacitors in parallel, ensuring correct polarity.
-- Attach MPPT boost converter module (BQ25570 or equivalent).
-- Connect output to USB ports and test voltage output.
-
----
-
-### Step 4: Enclosure and Wiring
-
-- Mount the assembly into the enclosure parts from the `hardware/3d_cad/` directory.
-- Route wiring through channels, secure with cable ties.
-- Add insulation to prevent shorts.
-- Test all connections before final sealing.
-
----
-
-## Firmware Installation
-
-### Supported Platforms
-
-- Arduino-compatible MCU (e.g., Arduino Nano 33 IoT, ESP32, STM32)
-- Firmware written in C++ using PlatformIO
-
----
-
-### Step 1: Prepare Your Environment
-
-- Install [PlatformIO IDE](https://platformio.org/install)
-- Connect your MCU to your PC via USB
-
----
-
-### Step 2: Clone or Download Firmware
-
-- Download the `/firmware/` directory from the repository
-
----
-
-### Step 3: Build and Upload
-
-- Open PlatformIO in your IDE
-- Open the `main.cpp` file
-- Build the project (`PlatformIO: Build`)
-- Upload to the MCU (`PlatformIO: Upload`)
-
----
-
-### Step 4: Verify Operation
-
-- Connect a voltmeter to the output terminals
-- Monitor charging status via serial console (baud rate 115200)
-- Ensure voltage stabilizes near 5V under load
-
----
-
-## Troubleshooting
-
-- **No output voltage?** Check coil wiring and polarity.
-- **Voltage fluctuates excessively?** Inspect supercapacitor connections.
-- **Firmware won’t upload?** Verify MCU driver installation.
-- **Short circuits?** Recheck wiring and insulation.
-
----
-
-## Safety Warnings
-
-- Do not disassemble magnets near pacemakers or sensitive electronics.
-- Handle supercapacitors carefully; they store large charge.
-- Avoid water or moisture ingress.
-
----
-
-For more detailed technical support, visit the `/docs/assembly_guide.md` or open an issue on GitHub.
-
----
-
-
-
+The manifest is a delivered-byte check. Run it before verification commands regenerate result logs. Repackaging uses `python scripts/package_release.py --out ../IX-ZeroCell-v0.2.0.zip`; regenerate only after reviewing and verifying the intended tree.

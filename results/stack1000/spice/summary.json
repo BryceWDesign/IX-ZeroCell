@@ -1,0 +1,69 @@
+{
+  "origin": "behavioral_ngspice",
+  "solver": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******\n",
+  "cases": [
+    {
+      "name": "nominal",
+      "source_count": 20,
+      "requested_internal_w": 1050,
+      "tail_min_v": 48.184766,
+      "tail_max_v": 48.184766,
+      "tail_load_w": 1049.9999988040136,
+      "voltage_window_pass": true,
+      "expected_window_pass": true,
+      "hardware_measured": false
+    },
+    {
+      "name": "nineteen_full_negative",
+      "source_count": 19,
+      "requested_internal_w": 1050,
+      "tail_min_v": 34.893118,
+      "tail_max_v": 34.893118,
+      "tail_load_w": 799.0038554049266,
+      "voltage_window_pass": false,
+      "expected_window_pass": false,
+      "hardware_measured": false
+    },
+    {
+      "name": "nineteen_derated",
+      "source_count": 19,
+      "requested_internal_w": 1000,
+      "tail_min_v": 48.0780714,
+      "tail_max_v": 48.0780714,
+      "tail_load_w": 999.9999999341285,
+      "voltage_window_pass": true,
+      "expected_window_pass": true,
+      "hardware_measured": false
+    },
+    {
+      "name": "overload_negative",
+      "source_count": 20,
+      "requested_internal_w": 1300,
+      "tail_min_v": 30.9004665,
+      "tail_max_v": 30.9004665,
+      "tail_load_w": 775.8065483424285,
+      "voltage_window_pass": false,
+      "expected_window_pass": false,
+      "hardware_measured": false
+    },
+    {
+      "name": "empty_negative",
+      "source_count": 0,
+      "requested_internal_w": 1050,
+      "tail_min_v": -4.1694585e-226,
+      "tail_max_v": -1.35437552e-256,
+      "tail_load_w": 0.0,
+      "voltage_window_pass": false,
+      "expected_window_pass": false,
+      "hardware_measured": false
+    }
+  ],
+  "checks_passed": true,
+  "hardware_validated": false,
+  "limitations": [
+    "generic diode, not ST qualification model",
+    "ideal current-limited regulator ports, not LT8705 switching or compensation",
+    "no storage in this output-port circuit",
+    "no fault interrupt-energy proof"
+  ]
+}

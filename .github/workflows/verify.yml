@@ -1,0 +1,42 @@
+name: Verify ZeroCell
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  software:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Energy, evidence, firmware and negative controls
+        run: python scripts/verify.py
+  avr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Actual ATmega328P image with official pinned compiler/core
+        run: python scripts/build_avr.py --fetch
+  circuit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Install circuit solver
+        run: sudo apt-get update -qq && sudo apt-get install -y ngspice
+      - name: Power path, source loss, cold start, negative controls and voltage-window circuit
+        run: python scripts/run_reference_poc.py
+      - name: Twenty-channel output combiner and negative controls
+        run: python scripts/run_stack_spice.py

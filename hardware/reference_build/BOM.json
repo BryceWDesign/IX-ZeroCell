@@ -1,0 +1,344 @@
+{
+  "schema": "1",
+  "build_id": "ZC-D10",
+  "version": "0.2.0",
+  "purpose": "Everyday source-dependent battery-free 5 V DC power",
+  "nominal_output_v": 5,
+  "continuous_design_target_w": 10,
+  "extended_qualification_target_w": 20,
+  "hardware_measured": false,
+  "custom_pcb_required": false,
+  "assembled_modules_required": true,
+  "parts": [
+    {
+      "ref": "PV1",
+      "quantity": 1,
+      "manufacturer": "ACOPOWER",
+      "part_or_purchase_spec": "HY050-12M",
+      "function": "50 W photovoltaic module; primary site-dependent energy input",
+      "source_url": "https://www.acopower.com/products/hy050-12m",
+      "category": "generation"
+    },
+    {
+      "ref": "U1",
+      "quantity": 1,
+      "manufacturer": "Pololu",
+      "part_or_purchase_spec": "D36V50F12 / item 4095",
+      "function": "Assembled 12 V buck regulator, fitted with the external enable divider below",
+      "source_url": "https://www.pololu.com/product/4095",
+      "category": "module"
+    },
+    {
+      "ref": "U2",
+      "quantity": 1,
+      "manufacturer": "Analog Devices",
+      "part_or_purchase_spec": "DC1937B",
+      "function": "Assembled LTC3350 board; replace R3 with RFB1 to set nominal 6.5 V backup; retain stock four 10 F capacitors and 2 A input limit",
+      "source_url": "https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/dc1937b.html",
+      "category": "module"
+    },
+    {
+      "ref": "U3",
+      "quantity": 1,
+      "manufacturer": "Pololu",
+      "part_or_purchase_spec": "D36V50F5 / item 4091",
+      "function": "Assembled final 5 V buck regulator",
+      "source_url": "https://www.pololu.com/product/4091",
+      "category": "module"
+    },
+    {
+      "ref": "RUV1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "2.20 kohm, 1%, 1 W, axial metal film",
+      "function": "PV input to U1 EN; external resistor overrides most internal pull-up tolerance",
+      "source_url": "https://www.pololu.com/product/4095",
+      "category": "passive"
+    },
+    {
+      "ref": "RUV2",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "191 ohm, 1%, 0.25 W, axial metal film",
+      "function": "U1 EN to ground; hysteretic source-voltage cutoff divider",
+      "source_url": "https://www.pololu.com/product/4095",
+      "category": "passive"
+    },
+    {
+      "ref": "RDIS",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "100 ohm, 5%, 5 W flameproof wirewound",
+      "function": "Service-only capacitor discharge resistor, switched, 1 W at 10 V",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/user-guides/dc1937bfa.pdf",
+      "category": "passive"
+    },
+    {
+      "ref": "F1",
+      "quantity": 1,
+      "manufacturer": "Littelfuse",
+      "part_or_purchase_spec": "0297005.H; 5 A MINI blade fuse, 32 V DC",
+      "function": "PV positive input protection",
+      "source_url": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+      "category": "protection"
+    },
+    {
+      "ref": "F2",
+      "quantity": 1,
+      "manufacturer": "Littelfuse",
+      "part_or_purchase_spec": "0297003.H; 3 A MINI blade fuse, 32 V DC",
+      "function": "12 V link protection, downstream of U1",
+      "source_url": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+      "category": "protection"
+    },
+    {
+      "ref": "F3",
+      "quantity": 1,
+      "manufacturer": "Littelfuse",
+      "part_or_purchase_spec": "0297005.H; 5 A MINI blade fuse, 32 V DC",
+      "function": "5 V output cable protection",
+      "source_url": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+      "category": "protection"
+    },
+    {
+      "ref": "F4",
+      "quantity": 1,
+      "manufacturer": "Littelfuse",
+      "part_or_purchase_spec": "0297002.H; 2 A MINI blade fuse, 32 V DC",
+      "function": "Service discharge branch protection",
+      "source_url": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+      "category": "protection"
+    },
+    {
+      "ref": "FH1-FH4",
+      "quantity": 4,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Insulated MINI-blade inline holder, at least 32 V DC / 10 A, 16 AWG leads",
+      "function": "One holder for each fuse; fuse body and holder must be the same MINI format",
+      "source_url": null,
+      "category": "protection"
+    },
+    {
+      "ref": "S1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "DPST maintained switch, explicit DC rating at least 30 V / 5 A",
+      "function": "Disconnect both PV conductors, never substitute AC-only rating",
+      "source_url": null,
+      "category": "switch"
+    },
+    {
+      "ref": "S2",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "SPST maintained switch, explicit DC rating at least 30 V / 10 A",
+      "function": "Output enable, manual hard disconnect",
+      "source_url": null,
+      "category": "switch"
+    },
+    {
+      "ref": "S3",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "SPST maintained covered switch, explicit DC rating at least 30 V / 5 A",
+      "function": "Service discharge only; must be OFF for normal operation",
+      "source_url": null,
+      "category": "switch"
+    },
+    {
+      "ref": "JPAIR",
+      "quantity": 1,
+      "manufacturer": "ACOPOWER-compatible",
+      "part_or_purchase_spec": "Matched pair PV connector to bare-wire adapter leads, 12 AWG, 1 m",
+      "function": "Buy the exact mating connector type supplied on the selected panel; do not mix incompatible nominal MC4 types",
+      "source_url": "https://www.acopower.com/products/hy050-12m",
+      "category": "wiring"
+    },
+    {
+      "ref": "JC1-JC3",
+      "quantity": 3,
+      "manufacturer": "WAGO",
+      "part_or_purchase_spec": "221-413",
+      "function": "Three-way paired-pad joins: U1 VOUT, U3 VIN, U3 VOUT",
+      "source_url": "https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-413",
+      "category": "wiring"
+    },
+    {
+      "ref": "JOUTP,JOUTN",
+      "quantity": 2,
+      "manufacturer": "WAGO",
+      "part_or_purchase_spec": "221-412",
+      "function": "Separate insulated two-way output connections, one positive and one negative",
+      "source_url": "https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-412",
+      "category": "wiring"
+    },
+    {
+      "ref": "WIRE16R",
+      "quantity": 2,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "16 AWG stranded copper, red, 105 C insulation",
+      "function": "Metres, trunk and fuse/switch connections; no copper-clad aluminium",
+      "source_url": null,
+      "category": "wiring"
+    },
+    {
+      "ref": "WIRE16B",
+      "quantity": 2,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "16 AWG stranded copper, black, 105 C insulation",
+      "function": "Metres, return conductors",
+      "source_url": null,
+      "category": "wiring"
+    },
+    {
+      "ref": "WIRE20R",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "20 AWG stranded copper, red, 105 C insulation",
+      "function": "Metre, paired 50 mm pigtails at duplicated module power pads",
+      "source_url": null,
+      "category": "wiring"
+    },
+    {
+      "ref": "WIRE20B",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "20 AWG stranded copper, black, 105 C insulation",
+      "function": "Metre, paired 50 mm module ground pigtails",
+      "source_url": null,
+      "category": "wiring"
+    },
+    {
+      "ref": "WIRE24",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "24 AWG stranded copper, insulated, 0.5 m",
+      "function": "Quantity is one 0.5 m length, EN divider connections only",
+      "source_url": null,
+      "category": "wiring"
+    },
+    {
+      "ref": "PB1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Unconnected-pad FR4 perfboard, 25 x 25 mm minimum",
+      "function": "Mount only RUV1 and RUV2; no solderless power breadboard",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "CASE1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Insulating enclosure, internal free space at least 300 x 250 x 100 mm",
+      "function": "Dry indoor, ventilated, removable insulated lid; no claimed IP rating",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "BASE1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Insulating mounting sheet, 250 x 200 x 3 mm",
+      "function": "FR4 or polycarbonate mounting plate inside enclosure",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "MOUNT1",
+      "quantity": 8,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "M2 x 10 mm nylon standoff, matching screws and nuts",
+      "function": "Three holes per Pololu board plus two perfboard mounts; eight complete sets",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "MOUNT2",
+      "quantity": 4,
+      "manufacturer": "Keystone or specification equivalent",
+      "part_or_purchase_spec": "8833 snap-in nylon standoff",
+      "function": "Use the four included U2 standoffs if supplied; otherwise procure four matching items",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/user-guides/dc1937bfa.pdf",
+      "category": "mechanical"
+    },
+    {
+      "ref": "CLAMP1",
+      "quantity": 12,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Insulating cable tie mounting base with cable tie",
+      "function": "Twelve complete strain-relief sets; no adhesive touching hot parts",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "GLAND1",
+      "quantity": 2,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Insulating cable gland matched to actual cable jacket diameter",
+      "function": "One PV entry and one output exit, jacket retained without exposing conductors",
+      "source_url": null,
+      "category": "mechanical"
+    },
+    {
+      "ref": "INSUL1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "3:1 heat-shrink assortment, 2/4/6 mm nominal, 1 m total",
+      "function": "Insulate every soldered terminal and all unused live service points",
+      "source_url": null,
+      "category": "consumable"
+    },
+    {
+      "ref": "SOLDER1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Electronics solder and compatible flux, one small pack",
+      "function": "Hand assembly of module pigtails and resistor board",
+      "source_url": null,
+      "category": "consumable"
+    },
+    {
+      "ref": "LABEL1",
+      "quantity": 1,
+      "manufacturer": "specification-selected",
+      "part_or_purchase_spec": "Durable insulated label sheet",
+      "function": "PV polarity, 5 V output, input/output fuse values, service bleed switch, unit identifier",
+      "source_url": null,
+      "category": "consumable"
+    },
+    {
+      "ref": "JC4-JC6",
+      "quantity": 3,
+      "manufacturer": "WAGO",
+      "part_or_purchase_spec": "221-415",
+      "function": "Five-way joins: U1 VIN, U1 GND, U3 GND; accommodate divider and multiple return trunks",
+      "source_url": "https://www.wago.com/global/installation-terminal-blocks-and-connectors/splicing-connector-with-levers/p/221-415",
+      "category": "wiring"
+    },
+    {
+      "ref": "RFB1",
+      "quantity": 1,
+      "manufacturer": "Vishay or exact specification equivalent",
+      "part_or_purchase_spec": "CRCW0402715KFKED; 715 kohm, 1%, 0402, at least 1/16 W",
+      "function": "REPLACES factory U2 R3 (649 kohm); keep factory U2 R4 (162 kohm); not a parallel addition",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/user-guides/dc1937bfa.pdf",
+      "category": "modification"
+    }
+  ],
+  "stock_U2_components_included": {
+    "capacitor_count": 4,
+    "capacitance_each_f": 10,
+    "series_count": 4,
+    "factory_float_bank_v": 10,
+    "factory_backup_v": 6,
+    "factory_input_limit_a": 2
+  },
+  "do_not_buy_extra_bank_for_stock_build": true,
+  "note": "Specification-selected passive, wiring and mechanical items are fully specified purchase requirements, not verified current vendor quotes. This BOM builds the module assembly; internal module components are purchased populated, not loose.",
+  "modified_backup_nominal_v": 6.496296296296296,
+  "source_uvlo_typical_v": {
+    "rising": 16.56500804295038,
+    "falling": 14.72445159373367
+  }
+}

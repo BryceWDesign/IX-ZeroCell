@@ -1,0 +1,8 @@
+{
+  "software_checks_passed": true,
+  "hardware_validated": false,
+  "hosted_ci_status": "query_GitHub_Actions_for_current_commit",
+  "python_tests_passed": 76,
+  "firmware_cases_passed": 23,
+  "stack_advisory_cases_passed": 15
+}

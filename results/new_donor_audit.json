@@ -1,0 +1,26 @@
+{
+  "donors": [
+    {
+      "archive": "IX-ZeroCell-72-main(20261026-021727).zip",
+      "sha256": "e3c98a6d7e0f37124447906c4d3652962802f8595d5cbddc55be7f03b7e0c1ba",
+      "inspection_scope": "Read the architecture/mission/source-path documents; no circuit or executable controller in this snapshot",
+      "existing_tests_passed": null,
+      "hardware_generation_demonstrated": false
+    },
+    {
+      "archive": "IX-Vahdat-main(4).zip",
+      "sha256": "153dbfc4d1292ab28298dca4e5768335ea280524045a05f68449fa7713a9ee56",
+      "inspection_scope": "Inspected power.py, energy.py, energy_profile.py and runbook concepts; executed the supplied test suite",
+      "existing_tests_passed": 399,
+      "hardware_generation_demonstrated": false
+    },
+    {
+      "archive": "CF-X1-Contested-Logistics-Resource-Node-main(2).zip",
+      "sha256": "6d73771bf400c47b4e217ef45a4b220b6f505cadf54396dfa222e466f67cfd56",
+      "inspection_scope": "Inspected project identity/provenance and source inventory; executed metadata/policy tests",
+      "existing_tests_passed": 18,
+      "hardware_generation_demonstrated": false
+    }
+  ],
+  "physical_generation_not_inferred_from_metadata": true
+}

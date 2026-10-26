@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "checks": {
+    "software": {
+      "executed": true,
+      "passed": true,
+      "exit_code": 0
+    },
+    "small_reference_circuit": {
+      "executed": true,
+      "passed": true,
+      "exit_code": 0
+    },
+    "stack_output_circuit": {
+      "executed": true,
+      "passed": true,
+      "exit_code": 0
+    },
+    "avr_monitor_compile": {
+      "executed": true,
+      "passed": true,
+      "exit_code": 0
+    }
+  },
+  "all_release_software_checks_passed": true,
+  "hardware_validated": false,
+  "construction_released": false,
+  "hosted_ci_status": "not_observed_for_this_unpushed_update",
+  "evidence": "computed, simulated and compiled only; no physical unit tested"
+}

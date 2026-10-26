@@ -1,0 +1,65 @@
+{
+  "scope": "ZeroCell energy accounting and controls only; no reactor-code redistribution",
+  "physical_power_validated": false,
+  "donors": [
+    {
+      "archive": "IX-Fusion-main(3).zip",
+      "sha256": "f4173325aabd6216e8d5836576752b7133533c9fa5482853c73d842f8fd1d533",
+      "baseline_tests_passed": 44,
+      "test_status": "executed_pass",
+      "selected_source_paths_inspected": [
+        "src/ix_fusion/plant.py",
+        "src/ix_fusion/thermal.py"
+      ]
+    },
+    {
+      "archive": "IX-MicroFusion-main.zip",
+      "sha256": "371b724e00768daf561a95063f650d127fb02a5070b4eb2bd48a2ce20eaabc99",
+      "baseline_tests_passed": 87,
+      "test_status": "executed_pass",
+      "selected_source_paths_inspected": [
+        "src/ix_microfusion/controller.py",
+        "src/ix_microfusion/evidence.py"
+      ]
+    },
+    {
+      "archive": "IX-ThermaForge-main(20261020-144232).zip",
+      "sha256": "750b6bb203c6fe42ebd7b4f558f0a4cf97f53934900218ce6b1444c018a8abb6",
+      "baseline_tests_passed": null,
+      "test_status": "selected_source_inspected_no_baseline_test_suite_run",
+      "selected_source_paths_inspected": [
+        "src/thermal_management/thermal_manager.py"
+      ]
+    },
+    {
+      "archive": "IX-ZeroCryo-Fusion-Bridge-v0.1.0.zip",
+      "sha256": "71c0ee47c4dedfb4eded870b9eec4ca36f6150ec75364acbaa2d0375c43fa26b",
+      "baseline_tests_passed": 53,
+      "test_status": "executed_pass",
+      "selected_source_paths_inspected": [
+        "zero_cryo_fusion/models.py",
+        "zero_cryo_fusion/integrated.py"
+      ]
+    },
+    {
+      "archive": "Nuclear-Fusion-Simulation-ClosedLoop-main(2).zip",
+      "sha256": "0dd41923baf461150321535c89f65b6e087271433ca516b142bf488a49b611cf",
+      "baseline_tests_passed": 65,
+      "test_status": "executed_pass",
+      "selected_source_paths_inspected": [
+        "closedloop/plant.py",
+        "tests/test_reactor_accounting.py"
+      ]
+    },
+    {
+      "archive": "OpenCryoCore-main(20261019-175144).zip",
+      "sha256": "34ae73d380a67378877c954fce0dee864515845091b2e915e4b9ef138d0bc460",
+      "baseline_tests_passed": null,
+      "test_status": "selected_source_inspected_no_baseline_test_suite_run",
+      "selected_source_paths_inspected": [
+        "opencryocore/core/cooling_model.py",
+        "opencryocore/hardware/power_interface.py"
+      ]
+    }
+  ]
+}

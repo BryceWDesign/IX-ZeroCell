@@ -1,0 +1,256 @@
+{
+  "origin": "numerical_simulation",
+  "hours": 24.0,
+  "step_s": 60,
+  "source_factors": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "initial_v": 0.0,
+  "min_bank_v": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final_bank_v": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "unserved_channel_wh": [
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0,
+    1440.0
+  ],
+  "unserved_total_wh": 28800.0,
+  "served_all_budgeted_load": false,
+  "net_source_input_j": 0.0,
+  "channel_output_j": 0.0,
+  "loss_and_curtailment_j": 0.0,
+  "storage_change_j": 0.0,
+  "closure_j": 0.0,
+  "max_step_residual_j": 0.0,
+  "trace": [
+    {
+      "time_s": 60.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 20.0
+    },
+    {
+      "time_s": 3600.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 1200.0
+    },
+    {
+      "time_s": 7200.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 2400.0
+    },
+    {
+      "time_s": 10800.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 3600.0
+    },
+    {
+      "time_s": 14400.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 4800.0
+    },
+    {
+      "time_s": 18000.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 6000.0
+    },
+    {
+      "time_s": 21600.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 7200.0
+    },
+    {
+      "time_s": 25200.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 8400.0
+    },
+    {
+      "time_s": 28800.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 9600.0
+    },
+    {
+      "time_s": 32400.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 10800.0
+    },
+    {
+      "time_s": 36000.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 12000.0
+    },
+    {
+      "time_s": 39600.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 13200.0
+    },
+    {
+      "time_s": 43200.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 14400.0
+    },
+    {
+      "time_s": 46800.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 15600.0
+    },
+    {
+      "time_s": 50400.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 16800.0
+    },
+    {
+      "time_s": 54000.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 18000.0
+    },
+    {
+      "time_s": 57600.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 19200.0
+    },
+    {
+      "time_s": 61200.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 20400.0
+    },
+    {
+      "time_s": 64800.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 21600.0
+    },
+    {
+      "time_s": 68400.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 22800.0
+    },
+    {
+      "time_s": 72000.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 24000.0
+    },
+    {
+      "time_s": 75600.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 25200.0
+    },
+    {
+      "time_s": 79200.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 26400.0
+    },
+    {
+      "time_s": 82800.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 27600.0
+    },
+    {
+      "time_s": 86400.0,
+      "min_bank_v": 0.0,
+      "max_bank_v": 0.0,
+      "unserved_wh": 28800.0
+    }
+  ],
+  "hardware_validated": false,
+  "excludes": "switching, controller stability, bus transients, faults, temperature and measured solar IV behavior"
+}

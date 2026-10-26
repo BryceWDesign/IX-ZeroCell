@@ -1,0 +1,37 @@
+{
+  "build_id": "ZC-D10",
+  "version": "0.2.0",
+  "hardware_measured": false,
+  "stock_capacitor_count": 4,
+  "cell_f_nominal": 10,
+  "bank_f_nominal": 2.5,
+  "bank_float_v": 10,
+  "bank_total_energy_j": 125,
+  "bank_ideal_usable_j_10_to_3V": 113.75,
+  "backup_after_R3_change_v": 6.496296296296296,
+  "source_voltage_window": {
+    "rising_v_typical": 16.56500804295038,
+    "falling_v_typical": 14.72445159373367
+  },
+  "bleed_ideal_seconds_10_to_0_5V": 748.9330683884978,
+  "base_continuous_target_w": 10,
+  "conditional_qualification_target_w": 20,
+  "source_input_limit_a": 2,
+  "source_12V_2A_gross_w": 24,
+  "illustrative_20W_input_w_at_90pct_final_and_98pct_pass": 22.725736961451247,
+  "overnight_10W_16h_screen": {
+    "required_nominal_bank_f": 25719.087635054024,
+    "parallel_strings": 10288,
+    "total_cells": 41152,
+    "origin": "sizing_assumptions",
+    "assembly_released": false
+  },
+  "72h_10W_no_input_screen": {
+    "required_nominal_bank_f": 115735.89435774312,
+    "parallel_strings": 46295,
+    "total_cells": 185180,
+    "origin": "sizing_assumptions",
+    "assembly_released": false
+  },
+  "large_bank_screen_is_not_a_released_expansion_build": true
+}

@@ -1,0 +1,34 @@
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp: In function 'void* operator new(std::size_t, std::nothrow_t)':
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp:59:60: warning: unused parameter 'tag' [-Wunused-parameter]
+ void * operator new(std::size_t size, const std::nothrow_t tag) noexcept {
+                                                            ^~~
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp: In function 'void* operator new [](std::size_t, const std::nothrow_t&)':
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp:68:63: warning: unused parameter 'tag' [-Wunused-parameter]
+ void * operator new[](std::size_t size, const std::nothrow_t& tag) noexcept {
+                                                               ^~~
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp: In function 'void operator delete(void*, const std::nothrow_t&)':
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp:103:55: warning: unused parameter 'tag' [-Wunused-parameter]
+ void operator delete(void* ptr, const std::nothrow_t& tag) noexcept {
+                                                       ^~~
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp: In function 'void operator delete [](void*, const std::nothrow_t&)':
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/tools/core/avr-1.8.6/cores/arduino/new.cpp:106:57: warning: unused parameter 'tag' [-Wunused-parameter]
+ void operator delete[](void* ptr, const std::nothrow_t& tag) noexcept {
+                                                         ^~~
+/workspace/scratch/4d9f432aa9cd/work_v020/IX-ZeroCell/build/avr/zerocell.elf  :
+section                     size      addr
+.data                         88   8388864
+.text                       9064         0
+.bss                         376   8388952
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               320         0
+.debug_info                 3234         0
+.debug_abbrev               1642         0
+.debug_line                 1792         0
+.debug_str                   520         0
+Total                      17117
+
+
+
+AVR compile PASS: 9152/32256 flash bytes, 464/2048 static SRAM bytes
+Monitor mode. No device was flashed; hardware validation remains false.

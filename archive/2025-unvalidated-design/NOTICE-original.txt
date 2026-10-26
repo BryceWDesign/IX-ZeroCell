@@ -1,0 +1,39 @@
+IX-ZeroCell – Ambient Energy Harvester (No-Battery Power Core)
+Copyright 2025 Bryce Wooster
+
+Licensed under the Apache License, Version 2.0 (the "License").
+
+You may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software and hardware
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+---
+
+This project includes original hardware and firmware contributions by:
+
+    Bryce Wooster – Lead Author, Circuit Designer, Firmware Architect
+
+No third-party libraries or external open-source components are included at this time.
+
+---
+
+Project Summary:
+IX-ZeroCell is an ultra-low-power, real-world energy harvesting platform that requires **no batteries**.
+It captures energy from ambient sources (kinetic, RF, thermal, tribo, piezo) and powers devices via USB or raw DC.
+
+Hardware is designed around:
+- 99-stage coil-based kinetic harvesters
+- MPPT with energy prioritization
+- Supercapacitor bank for safe, fast energy storage
+- Modular USB-A, USB-C, and raw outputs
+
+Firmware is modular, written in C++ for AVR-class MCUs, with a clean separation of logic and config files.
+
+---
+
+Contributions are welcome under the terms of the Apache License, version 2.0.
